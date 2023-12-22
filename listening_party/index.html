@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Party</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpeg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 140%;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #links {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        #link1 {
+            padding-left: 25px;
+        }
+
+        #link2 {
+            padding-right: 25px;
+        }
+
+        #audioPlayer {
+            position: absolute;
+            bottom: 80px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="audioPlayer" controls autoplay loop>
+        Your browser does not support the audio tag.
+    </audio>
+
+    <div id="links">
+        <a id="link1" href="#" onclick="playAudio('CALEB WAYNE RADIO FINISHED.m4a')">ENJOY PARTY 7</a>
+        <a id="link2" href="#" onclick="playAudio('listeningparty.mp3')">ENJOY PARTY 8 (NEW)</a>
+    </div>
+
+    <script>
+        function playAudio(audioSrc) {
+            var audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = audioSrc;
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>
